@@ -1,0 +1,51 @@
+Configuring switch:
+switch en  
+conf t
+hostname s1
+interface vlan1
+ip address 10.0.0.1 255.0.0.0 
+no shut
+enter
+exit-press 3 times 
+192.168.1.1-ip address for pc
+
+Enable password for switch First Method:
+en
+config t
+hostname sw1
+enable password technical
+exit
+config t
+line console 0
+password test
+login
+exit
+exit
+disable
+en
+enter password technical
+config t
+exit
+end
+Second Method for enabling username and password for switch:
+en
+config t
+enable ?
+config t
+username jradmin privilege ?
+username jradmin privilege 10 password cisco123
+line console 0
+login local
+exit
+exit
+exit
+user Access Verification
+Username:jradmin
+password: cisco123
+exit
+switch con0 is now available
+
+
+
+
+
